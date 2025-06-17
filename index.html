@@ -34,14 +34,14 @@
       var video = document.getElementById('hero-video');
       if (Hls.isSupported()) {
         var hls = new Hls();
-        hls.loadSource('https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner_x264.m3u8');
+        hls.loadSource('https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner.m3u8');
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED, function() {
           video.play();
         });
       }
       else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = 'https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner_x264.m3u8';
+        video.src = 'https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner.m3u8';
         video.addEventListener('loadedmetadata', function() {
           video.play();
         });
@@ -56,7 +56,7 @@
   <section class="hero is-fullheight">
     <div class="hero-video">
       <video id="hero-video" autoplay muted loop playsinline>
-        <source src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner_x264.m3u8" type="application/x-mpegURL">
+        <source src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner.m3u8" type="application/x-mpegURL">
       </video>
       <div class="hero-video-overlay"></div>
     </div>
