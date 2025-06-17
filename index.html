@@ -1,101 +1,147 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Sekai: A Video Dataset for World Exploration">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="video generation, world model">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <title>𝙎𝙚𝙠𝙖𝙞</title>
+  <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/js/fontawesome.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/js/bulma-carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/js/bulma-slider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var video = document.getElementById('hero-video');
+      if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource('https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner_x264.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          video.play();
+        });
+      }
+      else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = 'https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner_x264.m3u8';
+        video.addEventListener('loadedmetadata', function() {
+          video.play();
+        });
+      }
+    });
+  </script>
 </head>
+
 <body>
 
 
-  <section class="hero">
-    <div class="hero-body">
+  <section class="hero is-fullheight">
+    <div class="hero-video">
+      <video id="hero-video" autoplay muted loop playsinline>
+        <source src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner_x264.m3u8" type="application/x-mpegURL">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+    <div class="hero-body" style="padding-top: 24vh;">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+            <h1 class="title publication-title has-text-white" style="font-size: 3.5rem;white-space: nowrap;"><span style="color: #6fbf73;">𝙎</span><span style="color: #007bff;">𝙚</span></span><span style="color: #ffac33;">𝙠</span><span style="color: #9976db;">𝙖</span><span style="color: #ed4b82;">𝙞</span> : A Video Dataset for World Exploration</h1>
+            <div class="is-size-4 publication-authors has-text-white">
+              <span class="author-block">Zhen Li<sup style="color:#6fbf73; font-size: 0.7em;">1</sup><sup style="font-size: 0.7em;">,</sup><sup style="color:#007bff; font-size: 0.7em;">2</sup><sup style="font-size: 0.7em;">,</sup><sup style="color:#9976db; font-size: 0.7em;">4</sup>,</span>
+              <span class="author-block">Chuanhao Li<sup style="color:#6fbf73; font-size: 0.7em;">1</sup><sup style="font-size: 0.7em;">,</sup><sup style="font-size: 0.7em;">📧</sup>,</span>
+              <span class="author-block">Xiaofeng Mao<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,</span>
+              <span class="author-block">Shaoheng Lin<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,</span>
+              <span class="author-block">Ming Li<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,</span>
+              <span class="author-block">Shitian Zhao<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,</span>
+              <span class="author-block">Zhaopan Xu<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,</span><br>
+              <span class="author-block">Xinyue Li<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,</span>
+              <span class="author-block">Yukang Feng<sup style="color:#ffac33; font-size: 0.7em;">3</sup>,</span>
+              <span class="author-block">Jianwen Sun<sup style="color:#ffac33; font-size: 0.7em;">3</sup>,</span>
+              <span class="author-block">Zizhen Li<sup style="color:#ffac33; font-size: 0.7em;">3</sup>,</span>
+              <span class="author-block">Fanrui Zhang<sup style="color:#ffac33; font-size: 0.7em;">3</sup>,</span>
+              <span class="author-block">Jiaxin Ai<sup style="color:#ffac33; font-size: 0.7em;">3</sup>,</span>
+              <span class="author-block">Zhixiang Wang<sup style="color:#ed4b82; font-size: 0.7em;">5</sup>,</span><br>
+              <span class="author-block">Yuwei Wu<sup style="color:#007bff; font-size: 0.7em;">2</sup><sup style="font-size: 0.7em;">,</sup><sup style="color:#9976db; font-size: 0.7em;">4</sup><sup style="font-size: 0.7em;">,</sup><sup style="font-size: 0.7em;">📧</sup>,</span>
+              <span class="author-block">Tong He<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,</span>
+              <span class="author-block">Jiangmiao Pang<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,</span>
+              <span class="author-block">Yu Qiao<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,</span>
+              <span class="author-block">Yunde Jia<sup style="color:#9976db; font-size: 0.7em;">4</sup>,</span>
+              <span class="author-block">Kaipeng Zhang<sup style="color:#6fbf73; font-size: 0.7em;">1</sup><sup style="font-size: 0.7em;">,</sup><sup style="color:#ffac33; font-size: 0.7em;">3</sup><sup style="font-size: 0.7em;">,</sup><sup style="font-size: 0.7em;">📧</sup></span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-4 publication-authors mt-3 has-text-white">
+              <span class="author-block"><sup style="color:#6fbf73; font-size: 0.7em;">1</sup>Shanghai AI Laboratory,</span>
+              <span class="author-block"><sup style="color:#007bff; font-size: 0.7em;">2</sup>Beijing Institute of Technology,</span>
+              <span class="author-block"><sup style="color:#ffac33; font-size: 0.7em;">3</sup>Shanghai Innovation Institute,</span><br>
+              <span class="author-block"><sup style="color:#9976db; font-size: 0.7em;">4</sup>Shenzhen MSU-BIT University,</span>
+              <span class="author-block"><sup style="color:#ed4b82; font-size: 0.7em;">5</sup>The University of Tokyo</span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+            <div class="is-size-5 publication-authors mt-3 has-text-white">
+              <span class="author-block">📧 Corresponding Authors:</span>
+              <span class="author-block"><a href="mailto:wuyuwei@bit.edu.cn">wuyuwei@bit.edu.cn</a>,</span>
+              <span class="author-block"><a href="mailto:lichuanhao@pjlab.org.cn">lichuanhao@pjlab.org.cn</a>,</span>
+              <span class="author-block"><a href="mailto:zhangkaipeng@pjlab.org.cn" class="has-text-white">zhangkaipeng@pjlab.org.cn</a></span>
+            </div>
+            
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://www.google.com" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Arxiv PDF link -->
+                <!-- <span class="link-block">
+                        <a href="https://www.google.com" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
                         <span>Paper</span>
                       </a>
+                    </span> -->
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="https://www.google.com" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <!-- <i class="fas fa-file-pdf"></i> -->
+                      <p style="font-size:18px">🤗</p>
                     </span>
+                    <span>Hugging Face</span>
+                  </a>
+                </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://www.google.com" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -104,209 +150,198 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
+                <!-- Youtube link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="https://www.google.com" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Introduction Video</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .hero-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.8) 90%);
+    }
+    .hero.is-fullheight {
+      min-height: 100vh;
+    }
+  </style>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-lefted">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Video generation techniques have made remarkable progress, promising to be the foundation of interactive world exploration.
+              However, existing video generation datasets are not well-suited for world exploration training as they suffer from some limitations: limited locations, short duration, static scenes, and a lack of annotations about exploration and the world.
+              In this paper, we introduce Sekai (meaning "world" in Japanese), a high-quality first-person view worldwide video dataset with rich annotations for world exploration. 
+              It consists of over 5,000 hours of walking or drone view (FPV and UVA) videos from over 100 countries and regions across 750 cities. We develop an efficient and effective toolbox to collect, pre-process and annotate videos with location, scene, weather, crowd density, captions, and camera trajectories.
+              Experiments demonstrate the quality of the dataset. And, we use a subset to train an interactive video world exploration model, named YUME (meaning "dream" in Japanese).
+              We believe Sekai will benefit the area of video generation and world exploration, and motivate valuable applications.               
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
+  <!-- End paper abstract -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+  <!-- Youtube video -->   
+  <section class="hero is-small is-small">
+    <div class="hero-body">
+      <div class="container">
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-lefted">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 has-text-lefted">Introduction Video</h2>
+            <div class="publication-video">
+              <!-- Youtube embed code here -->
+              <iframe src="https://www.youtube.com/embed/KMPxsfIvv60" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
       </div>
     </div>
   </section>
-<!--End paper poster -->
+  <!-- End youtube video -->
 
+  <section class="section hero is-light">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-lefted">Dataset Overview</h2>
+          <div class="content">
+            <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/images/figure1-compressed.png" alt="pipeline" class="center mb-3">
+            <p>In this paper, we introduce Sekai (せかい, meaning "world" in Japanese), a high-quality egocentric worldwide video dataset for world exploration. Most videos contain audio for an immersive world generation. It also benefits other applications, such as video understanding, navigation, and video-audio co-generation. Sekai-Real comprises over 5000 hours of videos collected from YouTube with high-quality annotations. Sekai-Game comprises videos from a realistic video game, with ground-truth annotations. It has five distinct features:
+            </p>
+            <div class="box">
+              <div class="features-list">
+                <p class="mb-3">
+                  <span class="has-text-weight-bold">1. High-quality and diverse video.</span> All videos are recorded in 720p, featuring diverse weather, various times, and dynamic scenes.
+                </p>
+                <p class="mb-3">
+                  <span class="has-text-weight-bold">2. Worldwide location.</span> Videos span 100 countries and regions, showcasing 750+ cities with diverse cultures, activities, and landscapes.
+                </p>
+                <p class="mb-3">
+                  <span class="has-text-weight-bold">3. Walking and drone view.</span> Beyond walking videos, Seikai includes drone view (FPV and UAV) videos for unrestricted world exploration.
+                </p>
+                <p class="mb-3">
+                  <span class="has-text-weight-bold">4. Long duration.</span> All walking videos are at least 60 seconds long, ensuring real-world, long-term world exploration.
+                </p>
+                <p class="mb-3">
+                  <span class="has-text-weight-bold">5. Rich annotations.</span> All videos are annotated with location, scene, weather, crowd density, captions, and camera trajectories. YouTube videos' annotations are of high quality, while annotations from the game are considered ground truth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!--BibTex citation -->
+  <section class="section hero is-small">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-lefted">Dataset Curation</h2>
+          <div class="content">
+            <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/images/figure2-compressed.png" alt="pipeline" class="center mb-3">
+            <p>
+              The Sekai dataset curation pipeline comprises four stages: video collection, pre-processing, annotation, and diverse sampling.
+              It gathers over 8600 hours of high-resolution YouTube videos and 70 hours of photorealistic game footage. In pre-processing, videos are segmented into 400,000+ clips, followed by luminance, quality, subtitle, and trajectory filtering to ensure clean, high-quality data. Annotation is powered by LLMs (e.g., Qwen2.5-VL-72B, GPT-4o) and structure from motion models (MegaSaM), covering location, scene categories, detailed captions, and camera trajectories. Finally, a high-quality subset (Sekai-Real-HQ) is sampled using a combination of quality scores and diversity-aware strategies across location, category, content, and trajectory to ensure broad and balanced coverage for training.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-lefted">YUME Model</h2>
+          <div class="content">
+            <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/images/figure3-compressed.png" alt="pipeline" class="center mb-3">
+            <p>
+              We train an interactive world exploration model named YUME (ゆめ, meaning "dream" in Japanese) using a subset of the Sekai-Real-HQ. Specifically, it receives an image and allows unrestricted exploitation using keyboard and mouse control from users.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
+  <!--End BibTex citation -->
 
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+            <p>
+              This page is adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> license.
 
+            </p>
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code -->
 
-    <!-- End of Statcounter Code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-  </body>
-  </html>
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
