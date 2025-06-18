@@ -12,36 +12,36 @@
 
 
   <title>𝙎𝙚𝙠𝙖𝙞</title>
-  <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/js/fontawesome.all.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/js/bulma-carousel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/js/bulma-slider.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/js/index.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/js/fontawesome.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/js/bulma-carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/js/bulma-slider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var video = document.getElementById('hero-video');
       if (Hls.isSupported()) {
         var hls = new Hls();
-        hls.loadSource('https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner.m3u8');
+        hls.loadSource('https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/videos/banner.m3u8');
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED, function() {
           video.play();
         });
       }
       else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = 'https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner.m3u8';
+        video.src = 'https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/videos/banner.m3u8';
         video.addEventListener('loadedmetadata', function() {
           video.play();
         });
@@ -56,7 +56,7 @@
   <section class="hero is-fullheight">
     <div class="hero-video">
       <video id="hero-video" autoplay muted loop playsinline>
-        <source src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/videos/banner.m3u8" type="application/x-mpegURL">
+        <source src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/videos/banner.m3u8" type="application/x-mpegURL">
       </video>
       <div class="hero-video-overlay"></div>
     </div>
@@ -252,7 +252,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3 has-text-lefted">Dataset Overview</h2>
           <div class="content">
-            <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/images/figure1-compressed.png" alt="pipeline" class="center mb-3">
+            <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/images/figure1-compressed.png" alt="pipeline" class="center mb-3">
             <p>In this paper, we introduce Sekai (せかい, meaning "world" in Japanese), a high-quality egocentric worldwide video dataset for world exploration. Most videos contain audio for an immersive world generation. It also benefits other applications, such as video understanding, navigation, and video-audio co-generation. Sekai-Real comprises over 5000 hours of videos collected from YouTube with high-quality annotations. Sekai-Game comprises videos from a realistic video game, with ground-truth annotations. It has five distinct features:
             </p>
             <div class="box">
@@ -286,7 +286,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3 has-text-lefted">Dataset Curation</h2>
           <div class="content">
-            <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/images/figure2-compressed.png" alt="pipeline" class="center mb-3">
+            <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/images/figure2-compressed.png" alt="pipeline" class="center mb-3">
             <p>
               The Sekai dataset curation pipeline comprises four stages: video collection, pre-processing, annotation, and diverse sampling.
               It gathers over 8600 hours of high-resolution YouTube videos and 40 hours of photorealistic game footage. In pre-processing, videos are segmented into 400,000+ clips, followed by luminance, quality, subtitle, and trajectory filtering to ensure clean, high-quality data. Annotation is powered by LLMs (e.g., Qwen2.5-VL-72B, GPT-4o) and structure from motion models (MegaSaM), covering location, scene categories, detailed captions, and camera trajectories. Finally, a high-quality subset (Sekai-Real-HQ) is sampled using a combination of quality scores and diversity-aware strategies across location, category, content, and trajectory to ensure broad and balanced coverage for training.
@@ -303,7 +303,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3 has-text-lefted">YUME Model</h2>
           <div class="content">
-            <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/images/figure3-compressed.png" alt="pipeline" class="center mb-3">
+            <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.2.0/static/images/figure3-compressed.png" alt="pipeline" class="center mb-3">
             <p>
               We train an interactive world exploration model named YUME (ゆめ, meaning "dream" in Japanese) using a subset of the Sekai-Real-HQ. Specifically, it receives an image and allows unrestricted exploitation using keyboard and mouse control from users.
             </p>
