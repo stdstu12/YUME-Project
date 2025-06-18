@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Sekai: A Video Dataset for World Exploration">
+  <meta name="description" content="Sekai: A Video Dataset towards World Exploration">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="video generation, world model">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,7 +64,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title publication-title has-text-white" style="font-size: 3.5rem;white-space: nowrap;"><span style="color: #6fbf73;">𝙎</span><span style="color: #007bff;">𝙚</span></span><span style="color: #ffac33;">𝙠</span><span style="color: #9976db;">𝙖</span><span style="color: #ed4b82;">𝙞</span> : A Video Dataset for World Exploration</h1>
+            <h1 class="title publication-title has-text-white" style="font-size: 3.5rem;white-space: nowrap;"><span style="color: #6fbf73;">𝙎</span><span style="color: #007bff;">𝙚</span></span><span style="color: #ffac33;">𝙠</span><span style="color: #9976db;">𝙖</span><span style="color: #ed4b82;">𝙞</span> : A Video Dataset towards World Exploration</h1>
             <div class="is-size-4 publication-authors has-text-white">
               <span class="author-block">Zhen Li<sup style="color:#6fbf73; font-size: 0.7em;">1</sup><sup style="font-size: 0.7em;">,</sup><sup style="color:#007bff; font-size: 0.7em;">2</sup><sup style="font-size: 0.7em;">,</sup><sup style="color:#9976db; font-size: 0.7em;">4</sup>,</span>
               <span class="author-block">Chuanhao Li<sup style="color:#6fbf73; font-size: 0.7em;">1</sup><sup style="font-size: 0.7em;">,</sup><sup style="font-size: 0.7em;">📧</sup>,</span>
@@ -102,12 +102,16 @@
               <span class="author-block"><a href="mailto:lichuanhao@pjlab.org.cn">lichuanhao@pjlab.org.cn</a>,</span>
               <span class="author-block"><a href="mailto:zhangkaipeng@pjlab.org.cn" class="has-text-white">zhangkaipeng@pjlab.org.cn</a></span>
             </div>
+
+            <div class="is-size-6 publication-authors mt-3 has-text-white">
+              <span class="author-block">We are looking for collaboration and self-motivated interns. Contact: <a href="mailto:zhangkaipeng@pjlab.org.cn" class="has-text-white">zhangkaipeng@pjlab.org.cn</a>.</span>
+            </div>
             
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://www.google.com" target="_blank"
+                  <a href="https://arxiv.org/" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -129,7 +133,7 @@
 
                 <!-- Supplementary PDF link -->
                 <span class="link-block">
-                  <a href="https://www.google.com" target="_blank"
+                  <a href="https://huggingface.co/datasets/Lixsp11/Sekai-Project" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <!-- <i class="fas fa-file-pdf"></i> -->
@@ -141,7 +145,7 @@
 
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://www.google.com" target="_blank"
+                  <a href="https://github.com/Lixsp11/sekai-codebase" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -152,7 +156,7 @@
 
                 <!-- Youtube link -->
                 <span class="link-block">
-                  <a href="https://www.google.com" target="_blank"
+                  <a href="https://www.youtube.com/watch?v=5UQ0zAIZkSY" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -232,7 +236,7 @@
             <h2 class="title is-3 has-text-lefted">Introduction Video</h2>
             <div class="publication-video">
               <!-- Youtube embed code here -->
-              <iframe src="https://www.youtube.com/embed/KMPxsfIvv60" frameborder="0" allow="autoplay; encrypted-media"
+              <iframe src="https://www.youtube.com/embed/5UQ0zAIZkSY" frameborder="0" allow="autoplay; encrypted-media"
                 allowfullscreen></iframe>
             </div>
           </div>
@@ -285,7 +289,7 @@
             <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project/static/images/figure2-compressed.png" alt="pipeline" class="center mb-3">
             <p>
               The Sekai dataset curation pipeline comprises four stages: video collection, pre-processing, annotation, and diverse sampling.
-              It gathers over 8600 hours of high-resolution YouTube videos and 70 hours of photorealistic game footage. In pre-processing, videos are segmented into 400,000+ clips, followed by luminance, quality, subtitle, and trajectory filtering to ensure clean, high-quality data. Annotation is powered by LLMs (e.g., Qwen2.5-VL-72B, GPT-4o) and structure from motion models (MegaSaM), covering location, scene categories, detailed captions, and camera trajectories. Finally, a high-quality subset (Sekai-Real-HQ) is sampled using a combination of quality scores and diversity-aware strategies across location, category, content, and trajectory to ensure broad and balanced coverage for training.
+              It gathers over 8600 hours of high-resolution YouTube videos and 40 hours of photorealistic game footage. In pre-processing, videos are segmented into 400,000+ clips, followed by luminance, quality, subtitle, and trajectory filtering to ensure clean, high-quality data. Annotation is powered by LLMs (e.g., Qwen2.5-VL-72B, GPT-4o) and structure from motion models (MegaSaM), covering location, scene categories, detailed captions, and camera trajectories. Finally, a high-quality subset (Sekai-Real-HQ) is sampled using a combination of quality scores and diversity-aware strategies across location, category, content, and trajectory to ensure broad and balanced coverage for training.
             </p>
           </div>
         </div>
@@ -326,7 +330,7 @@
           <div class="content">
 
             <p>
-              This page is adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> license.
+              This page is adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> and licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> license.
 
             </p>
 
