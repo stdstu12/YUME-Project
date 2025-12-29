@@ -3,17 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="YUME: An Interactive World Generation Model">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="video generation, world model">
+  <meta name="description"
+    content="Yume 1.5: A Text-Controlled Interactive World Generation Model capable of generating realistic, interactive, and continuous worlds from a single image or text prompt.">
+  <meta name="keywords" content="Yume 1.5, Video Generation, World Model, Interactive AI, Diffusion Models, TSCM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yume 1.5: Text-Controlled Interactive World Generation</title>
 
-
-  <title>𝙔𝙪𝙢𝙚 1.5</title>
   <link rel="icon" type="image/x-icon"
     href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.3.0/static/images/favicon.ico">
+
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.3.0/static/css/bulma.min.css">
@@ -25,12 +23,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.3.0/static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.3.0/static/js/fontawesome.all.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.3.0/static/js/bulma-carousel.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.3.0/static/js/bulma-slider.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.3.0/static/js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var video = document.getElementById('hero-video');
@@ -50,162 +48,9 @@
       }
     });
   </script>
-</head>
-
-<body>
-
-
-  <section class="hero is-fullheight">
-    <div class="hero-video">
-      <video id="hero-video" autoplay muted loop playsinline>
-        <source src="./static/videos/banner.m3u8"
-          type="application/x-mpegURL">
-      </video>
-      <div class="hero-video-overlay"></div>
-    </div>
-    <div class="hero-body" style="padding-top: 24vh;">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-
-            <h1 class="title publication-title has-text-white" style="font-size: 3.5rem;white-space: nowrap;">
-              <span style="color: #6fbf73;">𝒀</span>
-              <span style="color: #007bff;">𝑼</span>
-              <span style="color: #ffac33;">𝑴</span>
-              <span style="color: #9976db;">𝑬</span>
-              <span style="color: #ff00ff;">1.5</span>: A Text-Controlled Interactive World Generation Model
-            </h1>
-            <div class="is-size-4 publication-authors has-text-white">
-              <span class="author-block">
-                Xiaofeng Mao<sup style="color:#6fbf73; font-size: 0.7em;">1</sup><sup style="font-size: 0.7em;">,</sup><sup style="color:#007bff; font-size: 0.7em;">2</sup>,
-              </span>
-              <span class="author-block">
-                Zhen Li<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
-              </span>
-              <span class="author-block">
-                Chuanhao Li<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
-              </span>
-              <span class="author-block">
-                Xiaojie Xu<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
-              </span>
-              <span class="author-block">
-                Kaining Ying<sup style="color:#6fbf73; font-size: 0.7em;">2</sup>,
-              </span><br>
-              <span class="author-block">
-                Tong He<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
-              </span>
-              <span class="author-block">
-                Jiangmiao Pang<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
-              </span>
-              <span class="author-block">
-                Yu Qiao<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
-              </span>
-              <span class="author-block">
-                Kaipeng Zhang<sup style="color:#6fbf73; font-size: 0.7em;">1</sup><sup style="font-size: 0.7em;">,</sup><sup style="color:#ffac33; font-size: 0.7em;">3</sup><sup style="font-size: 0.7em;">†‡</sup>
-              </span>
-            </div>
-            
-            <div class="is-size-4 publication-authors mt-3 has-text-white">
-              <span class="author-block"><sup style="color:#6fbf73; font-size: 0.7em;">1</sup>Shanghai AI Laboratory,</span>
-              <span class="author-block"><sup style="color:#007bff; font-size: 0.7em;">2</sup>Fudan University,</span>
-              <span class="author-block"><sup style="color:#ffac33; font-size: 0.7em;">3</sup>Shanghai Innovation Institute</span>
-            </div>
-            
-            
-            <!--             <div class="is-size-6 publication-note mt-3 has-text-white">
-              <p>This work was done during Xiaofeng's internship at Shanghai AI Laboratory.<br>
-              <sup>†</sup> Project Leader<br>
-              <sup>‡</sup> Corresponding Author</p>
-            </div>
-             -->
-
-            <div class="is-size-5 publication-authors mt-3 has-text-white">
-              <span class="author-block">We are looking for collaboration and self-motivated interns. Contact: <a
-                  href="mailto:kp_zhang@foxmail.com" class="has-text-white">kp_zhang@foxmail.com</a>.</span>
-            </div>
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2512.22096v1" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-
-                <!-- Arxiv PDF link -->
-                <!-- <span class="link-block">
-                        <a href="https://www.google.com" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span> -->
-
-                <!-- Supplementary PDF link -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/stdstu123/Yume-5B-720P" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <!-- <i class="fas fa-file-pdf"></i> -->
-                      <p style="font-size:18px">🤗</p>
-                    </span>
-                    <span>Hugging Face</span>
-                  </a>
-                </span>
-
-                <!-- Github link -->
-                <span class="link-block">
-                  <a href="https://github.com/stdstu12/YUME" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- Youtube link -->
-                <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=zhkWctq4N1k" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                    <span>Demo Video</span>
-                  </a>
-                </span>
-
-                <!-- Form link -->
-                <span class="link-block">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5GiQLL1vZQSo0fMDDINd2i_N0rga0a5008Td3lMw9ZimcUQ/viewform?usp=dialog" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-wpforms"></i>
-                    </span>
-                    <span>Sekai Dataset Access Assistance Form <span class="update-badge">(NEW)</span></span>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <style>
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
+    /* Custom Styles for Beautification */
     .hero-video {
       position: absolute;
       top: 0;
@@ -231,139 +76,157 @@
       background: radial-gradient(circle at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.8) 90%);
     }
 
-    .hero.is-fullheight {
-      min-height: 100vh;
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: -webkit-linear-gradient(45deg, #6fbf73, #007bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .overview-box {
+      border-radius: 12px;
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border: 1px solid #f1f1f1;
+      height: 100%;
     }
 
     .update-badge {
-    color: red;
-    font-weight: bold;
-    margin-left: 6px;
-    animation: flash 1.5s infinite;
-  }
+      color: #ff3860;
+      font-weight: bold;
+      margin-left: 6px;
+      animation: flash 1.5s infinite;
+    }
 
-  @keyframes flash {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
   </style>
+</head>
 
-  <!-- Paper abstract -->
+<body>
+
+  <section class="hero is-fullheight">
+    <div class="hero-video">
+      <video id="hero-video" autoplay muted loop playsinline>
+        <source src="./static/videos/banner.m3u8" type="application/x-mpegURL">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+    <div class="hero-body" style="padding-top: 24vh;">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title publication-title has-text-white" style="font-size: 3.5rem;white-space: nowrap;">
+              <span style="color: #6fbf73;">𝒀</span>
+              <span style="color: #007bff;">𝑼</span>
+              <span style="color: #ffac33;">𝑴</span>
+              <span style="color: #9976db;">𝑬</span>
+              <span style="color: #ff00ff;">1.5</span>: A Text-Controlled Interactive World Generation Model
+            </h1>
+            
+            <div class="is-size-4 publication-authors has-text-white">
+              <span class="author-block">Xiaofeng Mao<sup style="color:#6fbf73;">1,2</sup>,</span>
+              <span class="author-block">Zhen Li<sup style="color:#6fbf73;">1</sup>,</span>
+              <span class="author-block">Chuanhao Li<sup style="color:#6fbf73;">1</sup>,</span>
+              <span class="author-block">Xiaojie Xu<sup style="color:#6fbf73;">1</sup>,</span>
+              <span class="author-block">Kaining Ying<sup style="color:#007bff;">2</sup>,</span><br>
+              <span class="author-block">Tong He<sup style="color:#6fbf73;">1</sup>,</span>
+              <span class="author-block">Jiangmiao Pang<sup style="color:#6fbf73;">1</sup>,</span>
+              <span class="author-block">Yu Qiao<sup style="color:#6fbf73;">1</sup>,</span>
+              <span class="author-block">Kaipeng Zhang<sup style="color:#6fbf73;">1,3†‡</sup></span>
+            </div>
+            
+            <div class="is-size-5 publication-authors mt-3 has-text-white">
+              <span class="author-block"><sup style="color:#6fbf73;">1</sup>Shanghai AI Laboratory,</span>
+              <span class="author-block"><sup style="color:#007bff;">2</sup>Fudan University,</span>
+              <span class="author-block"><sup style="color:#ffac33;">3</sup>Shanghai Innovation Institute</span>
+            </div>
+
+            <div class="is-size-6 publication-authors mt-3 has-text-white">
+               <span class="author-block"> We are looking for collaboration and self-motivated interns. Contact: <a href="mailto:kp_zhang@foxmail.com" class="has-text-white" style="text-decoration: underline;">kp_zhang@foxmail.com</a>.</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2512.22096v1" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://huggingface.co/stdstu123/Yume-5B-720P" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><p style="font-size:18px">🤗</p></span>
+                    <span>Hugging Face</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/stdstu12/YUME" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=zhkWctq4N1k" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-youtube"></i></span>
+                    <span>Demo Video</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5GiQLL1vZQSo0fMDDINd2i_N0rga0a5008Td3lMw9ZimcUQ/viewform?usp=dialog" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-wpforms"></i></span>
+                    <span>Sekai Dataset <span class="update-badge">(NEW)</span></span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-lefted">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
+          <h2 class="title is-3 has-text-centered">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-             Recent approaches have demonstrated the promise of using diffusion models to generate interactive and explorable worlds. However, most of these methods face critical challenges such as excessively large parameter sizes, reliance on lengthy inference steps, and rapidly growing historical context, which severely limit real-time performance and lack text-controlled generation capabilities. To address these challenges, we propose Yume1.5, a novel framework designed to generate realistic, interactive, and continuous worlds from a single image or text prompt. Yume1.5 achieves this through a carefully designed framework that supports keyboard-based exploration of the generated worlds. The framework comprises three core components: (1) a long-video generation framework integrating unified context compression with linear attention; (2) a real-time streaming acceleration strategy powered by bidirectional attention distillation and an enhanced text embedding scheme; (3) a text-controlled method for generating world events. We have provided the codebase in the supplementary material. The model weights and full codebase will be made public.
+              Recent approaches have demonstrated the promise of using diffusion models to generate interactive and explorable worlds. However, most of these methods face critical challenges such as excessively large parameter sizes, reliance on lengthy inference steps, and rapidly growing historical context, which severely limit real-time performance and lack text-controlled generation capabilities. 
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End paper abstract -->
-
-  <!-- Youtube video -->
-  
-  <section class="hero is-small is-small">
-    <div class="hero-body">
-      <div class="container">
-        <!-- Paper video. -->
-        <div class="columns is-centered has-text-lefted">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3 has-text-lefted">Introduction Video</h2>
-            <div class="publication-video">
-              <!-- Youtube embed code here -->
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/zhkWctq4N1k?si=O-s58gfYnZa6oPrd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End youtube video -->
-  <!--
-  <section class="section hero is-light">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-lefted">Overview</h2>
-          <div class="content">
-            <img src="./static/images/yume1.png"
-              alt="Yume framework" class="center mb-3">
-            <img src="./static/images/yume2_01.png"
-              alt="Yume framework" class="center mb-3">
-            <p>Yume aims to create <strong>interactive, realistic, and dynamic worlds</strong> from images, text, or videos, enabling exploration and control via peripheral devices. This preview version generates dynamic worlds from images with keyboard-controllable navigation.</p>
-            
-            <div class="box">
-              <h3 class="title is-4">Technical Framework</h3>
-              <div class="features-list">
-                <p class="mb-4">
-                  <span class="has-text-weight-bold has-text-primary">1. Camera Motion Quantization</span><br>
-                  <strong>Quantized Camera Motion (QCM)</strong> translates camera trajectories into intuitive directional controls (forward/backward/left/right) and rotational actions (turn right/turn left/tilt up/tilt down) mapped to keyboard input. QCM embeds spatiotemporal context into control signals without additional learnable modules.
-                </p>
-                
-                <p class="mb-4">
-                  <span class="has-text-weight-bold has-text-info">2. Video Generation Architecture</span><br>
-                  <strong>Masked Video Diffusion Transformer (MVDT)</strong> with frame memory enables infinite autoregressive generation. This overcomes text-based control limitations observed in prior work, maintaining consistency across long sequences.
-                </p>
-                
-                <p class="mb-4">
-                  <span class="has-text-weight-bold has-text-warning">3. Enhanced Sampling Mechanisms</span><br>
-                  • <strong>Anti-Artifact Mechanism (AAM)</strong>: Training-free refinement of latent representations to enhance details<br>
-                  • <strong>Time-Travel SDE (TTS-SDE)</strong>: Stochastic differential equation-based sampling using future-frame guidance to maintain temporal coherence
-                </p>
-                
-                <p class="mb-4">
-                  <span class="has-text-weight-bold has-text-danger">4. Optimization Acceleration</span><br>
-                  Synergistic optimization combining <strong>adversarial distillation</strong> and <strong>caching mechanisms</strong> boosts sampling efficiency 3× while preserving visual fidelity.
-                </p>
-              </div>
-            </div>
-  
-            <div class="notification is-primary">
-              <p>Trained on the <strong>Sekai world exploration dataset</strong>, Yume achieves remarkable results across diverse scenes. <span class="has-text-weight-bold">All resources are open-source:</span></p>
-              <p class="mt-2">
-                <span class="icon-text">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>
-                    <a href="https://github.com/stdstu12/YUME">
-                      https://github.com/stdstu12/YUME
-                    </a>
-                  </span>
-                </span>
-              </p>
-            </div>
-  
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- 
-  <section class="section hero is-small">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-lefted">Dataset Curation</h2>
-          <div class="content">
-            <img src="./static/images/figure2-compressed.png"
-              alt="pipeline" class="center mb-3">
             <p>
-              The Sekai dataset curation pipeline comprises four stages: video collection, pre-processing, annotation,
-              and diverse sampling.
-              It gathers over 8600 hours of high-resolution YouTube videos and 40 hours of photorealistic game footage.
-              In pre-processing, videos are segmented into 400,000+ clips, followed by luminance, quality, subtitle, and
-              trajectory filtering to ensure clean, high-quality data. Annotation is powered by LLMs (e.g.,
-              Qwen2.5-VL-72B, GPT-4o) and structure from motion models (MegaSaM), covering location, scene categories,
-              detailed captions, and camera trajectories. Finally, a high-quality subset (Sekai-Real-HQ) is sampled
-              using a combination of quality scores and diversity-aware strategies across location, category, content,
-              and trajectory to ensure broad and balanced coverage for training.
+              To address these challenges, we propose <strong>Yume 1.5</strong>, a novel framework designed to generate realistic, interactive, and continuous worlds from a single image or text prompt. Yume 1.5 achieves this through a carefully designed framework that supports keyboard-based exploration of the generated worlds. The framework comprises three core components: (1) a long-video generation framework integrating unified context compression with linear attention; (2) a real-time streaming acceleration strategy powered by bidirectional attention distillation and an enhanced text embedding scheme; (3) a text-controlled method for generating world events.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Introduction Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/zhkWctq4N1k?si=O-s58gfYnZa6oPrd"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -371,29 +234,90 @@
   </section>
 
   <section class="section hero is-light">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-lefted">YUME Model</h2>
-          <div class="content">
-            <img src="https://cdn.jsdelivr.net/gh/Lixsp11/sekai-project@0.3.0/static/images/figure3-compressed.png"
-              alt="pipeline" class="center mb-3">
+    <div class="container is-max-desktop">
+      
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Overview</h2>
+          <div class="content has-text-justified">
             <p>
-              We train an interactive world exploration model named YUME (ゆめ, meaning "dream" in Japanese) using a
-              subset of the Sekai-Real-HQ. Specifically, it receives an image and allows unrestricted exploitation using
-              keyboard and mouse control from users.
+              Yume 1.5 generates interactive, infinite video worlds from single images or text prompts in an autoregressive manner.
+              Through systematic optimization, it achieves intuitive camera control via keyboard inputs (WASD) while significantly enhancing visual quality and continuity.
             </p>
           </div>
         </div>
       </div>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <figure class="image is-centered">
+            <img src="./static/images/teaser.png" alt="Yume 1.5 Overview: Text-to-world, Image-to-world, and Event Editing">
+            <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
+              <strong>Figure 1.</strong> Yume 1.5 supports three interactive generation modes: text-to-world generation from descriptions, image-to-world generation from static images, and text-based event editing.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <hr style="background-color: #ddd; height: 1px;">
+
+      <div class="columns is-multiline">
+        
+        <div class="column is-4">
+          <div class="overview-box has-text-centered">
+            <span class="icon feature-icon">
+              <i class="fas fa-infinity"></i>
+            </span>
+            <h3 class="title is-5">Infinite Context</h3>
+            <p class="is-size-6">
+              <strong>Joint Temporal-Spatial-Channel Modeling (TSCM)</strong> enables long-video generation. It uses unified context compression with linear attention to maintain quality without exploding memory costs as the video grows.
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="overview-box has-text-centered">
+            <span class="icon feature-icon">
+              <i class="fas fa-bolt"></i>
+            </span>
+            <h3 class="title is-5">Real-time Acceleration</h3>
+            <p class="is-size-6">
+              A streaming acceleration strategy powered by <strong>bidirectional attention distillation</strong> and Self-Forcing allows for fast inference, reducing error accumulation in long sequences.
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="overview-box has-text-centered">
+            <span class="icon feature-icon">
+              <i class="fas fa-keyboard"></i>
+            </span>
+            <h3 class="title is-5">Text & Event Control</h3>
+            <p class="is-size-6">
+              Unlike prior models, Yume 1.5 supports <strong>text-controlled event generation</strong>. It decomposes captions into Event and Action descriptions to allow precise control over dynamic world events.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered mt-5">
+        <div class="column is-10">
+          <h3 class="title is-4 has-text-centered">Methodology</h3>
+          <figure class="image is-centered">
+            <img src="./static/images/framework.png" alt="Yume 1.5 Architecture">
+            <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
+              <strong>Figure 3.</strong> Core components including the DiT Block with linear attention, adaptive history token downsampling, and chunk-based autoregressive inference.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
     </div>
-  </section> -->
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{mao2025yume,
+  </section>
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{mao2025yume,
   title={Yume: An Interactive World Generation Model},
   author={Mao, Xiaofeng and Lin, Shaoheng and Li, Zhen and Li, Chuanhao and Peng, Wenshuo and He, Tong and Pang, Jiangmiao and Chi, Mingmin and Qiao, Yu and Zhang, Kaipeng},
   journal={arXiv preprint arXiv:2507.17744},
@@ -409,35 +333,24 @@
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2512.22096}
 }</code></pre>
-  </div>
-</section>
-
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
-          <div class="content">
-
+          <div class="content has-text-centered">
             <p>
               This page is adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
                 target="_blank">Academic Project Page Template</a> and licensed under <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> license.
-
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
             </p>
-
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Statcounter tracking code -->
-
-  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-  <!-- End of Statcounter Code -->
-
 </body>
-
 </html>
