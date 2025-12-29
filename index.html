@@ -72,14 +72,12 @@
               <span style="color: #6fbf73;">𝒀</span>
               <span style="color: #007bff;">𝑼</span>
               <span style="color: #ffac33;">𝑴</span>
-              <span style="color: #9976db;">𝑬</span>: An Interactive World Generation Model
+              <span style="color: #9976db;">𝑬</span>
+              <span style="color: #ff00ff;">1.5</span>: A Text-Controlled Interactive World Generation Model
             </h1>
             <div class="is-size-4 publication-authors has-text-white">
               <span class="author-block">
                 Xiaofeng Mao<sup style="color:#6fbf73; font-size: 0.7em;">1</sup><sup style="font-size: 0.7em;">,</sup><sup style="color:#007bff; font-size: 0.7em;">2</sup>,
-              </span>
-              <span class="author-block">
-                Shaoheng Lin<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
               </span>
               <span class="author-block">
                 Zhen Li<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
@@ -88,16 +86,16 @@
                 Chuanhao Li<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
               </span>
               <span class="author-block">
-                Wenshuo Peng<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
+                Xiaojie Xu<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
+              </span>
+              <span class="author-block">
+                Kaining Ying<sup style="color:#6fbf73; font-size: 0.7em;">2</sup>,
               </span><br>
               <span class="author-block">
                 Tong He<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
               </span>
               <span class="author-block">
                 Jiangmiao Pang<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
-              </span>
-              <span class="author-block">
-                Mingmin Chi<sup style="color:#007bff; font-size: 0.7em;">2</sup><sup style="font-size: 0.7em;">‡</sup>,
               </span>
               <span class="author-block">
                 Yu Qiao<sup style="color:#6fbf73; font-size: 0.7em;">1</sup>,
@@ -130,7 +128,7 @@
               <div class="publication-links">
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/xxx" target="_blank"
+                  <a href="https://arxiv.org/abs/2512.22096v1" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -152,7 +150,7 @@
 
                 <!-- Supplementary PDF link -->
                 <span class="link-block">
-                  <a href="https://huggingface.co/stdstu123/Yume-I2V-540P" target="_blank"
+                  <a href="https://huggingface.co/stdstu123/Yume-5B-720P" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <!-- <i class="fas fa-file-pdf"></i> -->
@@ -175,7 +173,7 @@
 
                 <!-- Youtube link -->
                 <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=51VII_iJ1EM" target="_blank"
+                  <a href="https://www.youtube.com/watch?v=zhkWctq4N1k" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -258,7 +256,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Yume aims to use images, text, or videos to create an interactive, realistic, and dynamic world, which allows exploration and control using peripheral devices or neural signals. In this report, we present a preview version of Yume, which creates a dynamic world from an input image and allows exploration of the world using keyboard actions. To achieve this high-fidelity and interactive video world generation, we introduce a well-designed framework, which consists of four main components, including camera motion quantization, video generation architecture, advanced sampler, and model acceleration. First, we quantize camera motions for stable training and user-friendly interaction using keyboard inputs. Then, we introduce the Masked Video Diffusion Transformer~(MVDT) with a memory module for infinite video generation in an autoregressive manner. After that, training-free Anti-Artifact Mechanism (AAM) and Time Travel Sampling based on Stochastic Differential Equations (TTS-SDE) are introduced to the sampler for better visual quality and more precise control. Moreover, we investigate model acceleration by synergistic optimization of adversarial distillation and caching mechanisms. We use the high-quality world exploration dataset Sekai to train Yume, and it achieves remarkable results in diverse scenes and applications. All data, codebase, and model weights are available on https://github.com/stdstu12/YUME. Yume will update monthly to achieve its original goal.
+             Recent approaches have demonstrated the promise of using diffusion models to generate interactive and explorable worlds. However, most of these methods face critical challenges such as excessively large parameter sizes, reliance on lengthy inference steps, and rapidly growing historical context, which severely limit real-time performance and lack text-controlled generation capabilities. To address these challenges, we propose Yume1.5, a novel framework designed to generate realistic, interactive, and continuous worlds from a single image or text prompt. Yume1.5 achieves this through a carefully designed framework that supports keyboard-based exploration of the generated worlds. The framework comprises three core components: (1) a long-video generation framework integrating unified context compression with linear attention; (2) a real-time streaming acceleration strategy powered by bidirectional attention distillation and an enhanced text embedding scheme; (3) a text-controlled method for generating world events. We have provided the codebase in the supplementary material. The model weights and full codebase will be made public.
             </p>
           </div>
         </div>
@@ -268,6 +266,7 @@
   <!-- End paper abstract -->
 
   <!-- Youtube video -->
+  
   <section class="hero is-small is-small">
     <div class="hero-body">
       <div class="container">
@@ -277,7 +276,7 @@
             <h2 class="title is-3 has-text-lefted">Introduction Video</h2>
             <div class="publication-video">
               <!-- Youtube embed code here -->
-              <iframe src="https://www.youtube.com/embed/51VII_iJ1EM" frameborder="0" allow="autoplay; encrypted-media"
+              <iframe src="https://www.youtube.com/embed/zhkWctq4N1k" frameborder="0" allow="autoplay; encrypted-media"
                 allowfullscreen></iframe>
             </div>
           </div>
@@ -286,7 +285,7 @@
     </div>
   </section>
   <!-- End youtube video -->
-
+  <!--
   <section class="section hero is-light">
     <div class="container">
       <div class="columns is-centered">
@@ -389,7 +388,7 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section> 
 
   <!--BibTex citation -->
   <section class="section" id="BibTeX">
@@ -404,7 +403,7 @@
     </div>
   </section>
   <!--End BibTex citation -->
-
+-->
 
   <footer class="footer">
     <div class="container">
